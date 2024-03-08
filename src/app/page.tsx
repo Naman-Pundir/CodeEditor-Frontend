@@ -3,6 +3,8 @@
 import Editor from '@monaco-editor/react'
 import { useState, useRef } from 'react';
 import "./app.css"
+import {handleCode} from "../submit"
+
 
 export default function Home() {
 
@@ -43,6 +45,7 @@ export default function Home() {
 
   function compile(){
     console.log(userInput);
+    handleCode(userCode, userInput);
   }
 
   return (
